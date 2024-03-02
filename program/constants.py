@@ -1,14 +1,22 @@
 from dydx3.constants import API_HOST_SEPOLIA, API_HOST_MAINNET
 from decouple import config
 
-# !!! SELECT MODE !!!
+# !!!! SELECT MODE !!!!  
+
+#DEVELOPMENT or PRODUCTION
 MODE = "DEVELOPMENT"
 
 # Close all open positions and orders
-ABORT_ALL_POSITIONS = False
+ABORT_ALL_POSITIONS = True
 
-# Find Conitegrated Pairs
+# Find Cointegrated Pairs
 FIND_COINTEGRATED = True
+
+## Find R Squared pairs
+FIND_RSQUARED = True
+
+# Manage Exits
+MANAGE_EXITS = True
 
 # Place Trades
 PLACE_TRADES = True
@@ -17,29 +25,43 @@ PLACE_TRADES = True
 RESOLUTION = "1HOUR"
 
 # Stats Window
-WINDOW = 21
+WINDOW = 10
+
+# TOKENS to follow
+TOKENS = [
+    "BTC", "ETH", "USDT", "BNB", "SOL", "XRP", "USDC", "ADA", "AVAX", "DOGE",
+    "TRX", "LINK", "DOT", "MATIC", "WBTC", "TONCOIN", "UNI", "SHIB", "ICP",
+    "BCH", "LTC", "DAI", "IMX", "STX", "ATOM", "ETC", "NEAR", "LEO", "FIL",
+    "KAS", "VET", "APT", "HBAR", "INJ", "OP", "XLM", "FDUSD", "OKB", "LDO",
+    "MNT", "TIA", "RNDR", "CRO", "GRT", "XMR", "ARB", "SEI", "RUNE", "MKR", "THETA"
+]
+
+
+#R-SQUARED Threshold
+RSQUARED_THRESH = 0.8
 
 # Thresholds - Opening
 MAX_HALF_LIFE = 24
-ZSCORE_THRESH = 1.5
-USD_PER_TRADE = 50
+ZSCORE_THRESH = 1.5 
+USD_PER_TRADE = 100
 USD_MIN_COLLATERAL = 1880
 
+
 # Thresholds - Closing
-CLOSE_AT_ZCORE_CROSS = True
+CLOSE_AT_ZSCORE_CROSS = True
 
 # Ethereum Address
 ETHEREUM_ADDRESS = "0x483cff8f44c38288b158Eb3462aB8Cf170F19AaB"
 
-# KEYS - Production
-# MUST CONFIRM THAT I AM ON !!!*** MAINNET ***!!! ON DYDX 
+# KEYS - PRODUCTION
+# Must be on Mainnet in DYDX
 STARK_PRIVATE_KEY_MAINNET = config("STARK_PRIVATE_KEY_MAINNET")
 DYDX_API_KEY_MAINNET = config("DYDX_API_KEY_MAINNET")
 DYDX_API_SECRET_MAINNET = config("DYDX_API_SECRET_MAINNET")
 DYDX_API_PASSPHRASE_MAINNET = config("DYDX_API_PASSPHRASE_MAINNET")
 
-# KEYS - Development
-# MUST CONFIRM THAT I AM ON !!!*** TESTNET ***!!! ON DYDX 
+# KEYS - DEVELOPMENT
+# Must be on Testnet in DYDX
 STARK_PRIVATE_KEY_TESTNET = config("STARK_PRIVATE_KEY_TESTNET")
 DYDX_API_KEY_TESTNET = config("DYDX_API_KEY_TESTNET")
 DYDX_API_SECRET_TESTNET = config("DYDX_API_SECRET_TESTNET")
