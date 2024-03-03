@@ -1,2 +1,8 @@
 .env
 venv
+!! func private.py
+!! func_bot_agent.py
+!! func_cointegration-with-rsquared
+!! func_cointegration.py
+!! fun_entry_pairs.old.py
+!! func_utils_old
