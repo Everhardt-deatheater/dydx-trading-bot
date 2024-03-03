@@ -7,16 +7,16 @@ from decouple import config
 MODE = "DEVELOPMENT"
 
 # Close all open positions and orders
-ABORT_ALL_POSITIONS = True
+ABORT_ALL_POSITIONS = True 
 
 # Find Cointegrated Pairs
-FIND_COINTEGRATED = True
+FIND_COINTEGRATED = True 
 
 ## Find R Squared pairs
-FIND_RSQUARED = True
+FIND_RSQUARED = True 
 
 # Manage Exits
-MANAGE_EXITS = True
+MANAGE_EXITS = True 
 
 # Place Trades
 PLACE_TRADES = True
@@ -25,7 +25,7 @@ PLACE_TRADES = True
 RESOLUTION = "1HOUR"
 
 # Stats Window
-WINDOW = 10
+WINDOW = 21
 
 # TOKENS to follow
 TOKENS = [
