@@ -10,16 +10,16 @@ MODE = "DEVELOPMENT"
 ABORT_ALL_POSITIONS = True 
 
 # Find Cointegrated Pairs
-FIND_COINTEGRATED = False
+FIND_COINTEGRATED = True
 
 ## Find R Squared pairs
-FIND_RSQUARED = False
+FIND_RSQUARED = True
 
 # Manage Exits
 MANAGE_EXITS = True 
 
 # Place Trades
-PLACE_TRADES = False
+PLACE_TRADES = True
 
 # Resolution
 RESOLUTION = "1HOUR"
